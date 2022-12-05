@@ -28,8 +28,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          docker pull gcr.io/k8s-testimages/grafana/grafana:6.2.0
-          docker tag gcr.io/k8s-testimages/grafana/grafana:6.2.0  zgzhang4/grafana:6.2.0
+          docker pull gcr.io/k8s-testimages/quay.io/prometheus-operator/prometheus-operator:v0.46.0
+          docker tag gcr.io/k8s-testimages/quay.io/prometheus-operator/prometheus-operator:v0.46.0  zgzhang4/prometheus-operator:v0.46.0
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
@@ -40,4 +40,4 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Push to Docker Registry
         run: |
-          docker push zgzhang4/grafana:6.2.0
+          docker push zgzhang4/prometheus-operator:v0.46.0
