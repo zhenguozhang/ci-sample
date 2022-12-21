@@ -29,7 +29,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           docker pull --platform=arm64   k8s.gcr.io/e2e-test-images/agnhost:2.32
-          docker tag  、  k8s.gcr.io/e2e-test-images/agnhost:2.32  zgzhang4/agnhost:2.33
+          docker tag    k8s.gcr.io/e2e-test-images/agnhost:2.32  zgzhang4/agnhost:2.33
       
       - name: Log in to Docker Hub
         uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
